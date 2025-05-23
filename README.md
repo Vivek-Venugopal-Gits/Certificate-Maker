@@ -72,12 +72,12 @@ Currently, the script must be modified directly to apply visual changes—there 
 
 ## Commmands
 ### To create certificates
- ```bash
+<pre> ```bash
             python certificate_generator.py "<template_name>.png" "<excel_name>.xlsx  ```</pre>
 
 
            
 ### To Convert png files to pdf
-```bash
+<pre>```bash
 
-           python png_to_pdf.py "<source folder>" "<destination folder>"
+           python png_to_pdf.py "<source folder>" "<destination folder>" ```</pre>
