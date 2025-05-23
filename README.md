@@ -37,7 +37,7 @@ CertificateMaker/
 
 To change the font type or fallback fonts, update the block in certificate__generator.py under:
 
-<pre> ```python
+```python
 try:
     name_font = ImageFont.truetype("fonts/Literata-SemiBold.ttf", name_font_size)
     college_font = ImageFont.truetype("fonts/Literata-SemiBold.ttf", college_font_size)
@@ -51,10 +51,12 @@ except:
         paragraph_bold = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
     except:
         print("Warning: Could not load specified fonts, using default")
-        name_font = college_font = paragraph_font = paragraph_bold = ImageFont.load_default()```</pre>
+        name_font = college_font = paragraph_font = paragraph_bold = ImageFont.load_default()
+```
 
 To change the position, font size, alignment, or color of the name and college text, update the argparse configuration:
-<pre> ```python
+
+ ```python
 parser.add_argument('--name-font-size', type=int, default=45, help='Font size for name text')
 parser.add_argument('--college-font-size', type=int, default=30, help='Font size for college text')
 parser.add_argument('--name-x', type=int, default=270, help='X position for name text')
@@ -64,20 +66,22 @@ parser.add_argument('--college-y', type=int, default=772, help='Y position for c
 parser.add_argument('--name-align', default='left', choices=['left', 'center', 'right'], help='Alignment for name')
 parser.add_argument('--college-align', default='left', choices=['left', 'center', 'right'], help='Alignment for college')
 parser.add_argument('--name-color', nargs=3, type=int, default=[0, 0, 0], metavar=('R', 'G', 'B'), help='RGB color for name text')
-parser.add_argument('--college-color', nargs=3, type=int, default=[0, 0, 0], metavar=('R', 'G', 'B'), help='RGB color for college text')```</pre>
-
+parser.add_argument('--college-color', nargs=3, type=int, default=[0, 0, 0], metavar=('R', 'G', 'B'), help='RGB color for college text')
+ ```
 
 Currently, the script must be modified directly to apply visual changes—there is no GUI or interactive interface to adjust these settings.
 
 
 ## Commmands
 ### To create certificates
-<pre> ```bash
-            python certificate_generator.py "<template_name>.png" "<excel_name>.xlsx  ```</pre>
+```bash
+            python certificate_generator.py "<template_name>.png" "<excel_name>.xlsx"
+```
 
 
            
 ### To Convert png files to pdf
-<pre>```bash
+```bash
 
-           python png_to_pdf.py "<source folder>" "<destination folder>" ```</pre>
+           python png_to_pdf.py "<source folder>" "<destination folder>"
+```
