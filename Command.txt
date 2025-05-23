@@ -1,0 +1,5 @@
+To create certificates
+            python certificate_generator.py "<template_name>.png" "<excel_name>.xlsx" 
+
+To Convert png files to pdf
+            python png_to_pdf.py "<source folder>" "<destination folder>"
