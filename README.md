@@ -23,7 +23,7 @@ The script takes:
 
 CertificateMaker/
 │
-├── certificates/ # Here the generated certificates in png mode will be saved
+├── certificates/ # Here the generated certificates in png mode will be saved <br>
 ├── fonts/ # Store your desired font in .ttf file mode to access and put in the certificate
 ├── template/ # Template of the certificate
 ├── .xlsx file/ # The file containing info
