@@ -22,7 +22,6 @@ The script takes:
 ## 📦 Project Structure
 
 CertificateMaker<br>
- |<br>
 ├── certificates/ # Here the generated certificates in png mode will be saved <br>
 ├── fonts/ # Store your desired font in .ttf file mode to access and put in the certificate<br>
 ├── template/ # Template of the certificate<br>
