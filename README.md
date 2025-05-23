@@ -72,7 +72,7 @@ Currently, the script must be modified directly to apply visual changes—there 
 
 ## Commmands
 ### To create certificates
-<pre> ```bash
+ ```bash
             python certificate_generator.py "<template_name>.png" "<excel_name>.xlsx  ```</pre>
 
 
