@@ -84,46 +84,6 @@ def generate_certificates(template_path, excel_path, output_dir,
         paragraph_x = 535  # center
         paragraph_y = college_position[1] + 70
 
-        before_event = f"This Certificate is to certify {name} of {college} has participated in six days online faculty development program on "
-        event_name = "“Agentic AI and Large Language Models”"
-        after_event = " conducted by the department of Computer Science and Engineering from 03/05/2025 to 09/05/2025."
-
-        full_message = before_event + event_name + after_event
-        max_width = certificate.width - 100
-
-        words = full_message.split()
-        lines = []
-        current_line = ""
-
-        for word in words:
-            test_line = current_line + " " + word if current_line else word
-            width = draw.textlength(test_line, font=paragraph_font)
-            if width <= max_width:
-                current_line = test_line
-            else:
-                lines.append(current_line)
-                current_line = word
-        if current_line:
-            lines.append(current_line)
-
-        for line in lines:
-            event_index = line.find(event_name)
-            line_width = draw.textlength(line, font=paragraph_font)
-            line_x = paragraph_x - line_width / 2
-
-            if event_name in line:
-                before, after = line.split(event_name)
-                bx = line_x
-                draw.text((bx, paragraph_y), before, fill=(0, 0, 0), font=paragraph_font)
-                bx += draw.textlength(before, font=paragraph_font)
-                draw.text((bx, paragraph_y), event_name, fill=(0, 0, 0), font=paragraph_bold)
-                bx += draw.textlength(event_name, font=paragraph_bold)
-                draw.text((bx, paragraph_y), after, fill=(0, 0, 0), font=paragraph_font)
-            else:
-                draw.text((line_x, paragraph_y), line, fill=(0, 0, 0), font=paragraph_font)
-
-            paragraph_y += paragraph_font.size + 5
-
         # Save certificate
         safe_name = "".join(c for c in name if c.isalnum() or c in (' ', '_')).strip()
         output_path = os.path.join(output_dir, f"certificate_{safe_name}.png")
