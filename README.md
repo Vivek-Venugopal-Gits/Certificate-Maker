@@ -21,16 +21,16 @@ The script takes:
 
 ## 📦 Project Structure
 
-CertificateMaker/
-│
+CertificateMaker<br>
+|<br>
 ├── certificates/ # Here the generated certificates in png mode will be saved <br>
-├── fonts/ # Store your desired font in .ttf file mode to access and put in the certificate
-├── template/ # Template of the certificate
-├── .xlsx file/ # The file containing info
-├── certificate_generator.py/ # Main script for generating certificate in png 
-├── Command.txt /# This txt files contains how to run the program 
-├── png_to_pdf.py/ # Main script for converting png files to pdf
-└── README.md # You're here!
+├── fonts/ # Store your desired font in .ttf file mode to access and put in the certificate<br>
+├── template/ # Template of the certificate<br>
+├── .xlsx file/ # The file containing info <br>
+├── certificate_generator.py/ # Main script for generating certificate in png <br>
+├── Command.txt /# This txt files contains how to run the program <br>
+├── png_to_pdf.py/ # Main script for converting png files to pdf <br>
+└── README.md # You're here <br>
 
 
 ⚠️ Note: This project is designed with a hard-coded configuration approach. To customize the alignment, font, size, and style of the certificate content, you will need to manually edit the source code.
